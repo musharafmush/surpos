@@ -89,8 +89,8 @@ console.log('🚩 Checkpoint 3: Entering async block');
       serveStatic(app);
     }
 
-    // ALWAYS serve the app on port 5004
-    const port = Number(process.env.PORT) || 5004;
+    // ALWAYS serve the app on port 5006
+    const port = Number(process.env.PORT) || 5006;
     let retryCount = 0;
     const maxRetries = 5;
 

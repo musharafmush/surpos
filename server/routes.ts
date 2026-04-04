@@ -8977,7 +8977,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // App Branding Routes
   app.get('/api/branding', async (req, res) => {
     try {
-      const appName = await storage.getSetting('app_name') || 'Nebula POS';
+      const appName = await storage.getSetting('app_name') || 'SURPOS';
       const logoIcon = await storage.getSetting('logo_icon') || 'Zap';
       const logoColor = await storage.getSetting('logo_color') || 'from-indigo-500 to-purple-600';
       const primaryColor = await storage.getSetting('primary_color') || '262 83% 58%';

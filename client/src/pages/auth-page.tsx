@@ -76,7 +76,7 @@ export default function AuthPage() {
     }
   });
 
-  const appName = branding?.appName || "Nebula POS";
+  const appName = branding?.appName || "SURPOS";
   const logoIcon = branding?.logoIcon || "Zap";
   const logoColor = branding?.logoColor || "from-indigo-500 to-purple-600";
 

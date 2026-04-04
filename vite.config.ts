@@ -35,10 +35,10 @@ export default defineConfig({
   },
   server: {
     host: "0.0.0.0",
-    port: 5004,
+    port: 5006,
     allowedHosts: true,
     hmr: {
-      port: 5004,
+      port: 5006,
       host: "0.0.0.0"
     }
   },

@@ -24,7 +24,7 @@ export default function BrandingPage() {
 
   // Branding State
   const [branding, setBranding] = useState({
-    appName: 'Nebula POS',
+    appName: 'SURPOS',
     logoIcon: 'Zap',
     logoColor: 'from-indigo-500 to-purple-600',
     primaryColor: '262 83% 58%' // Default to a nice purple

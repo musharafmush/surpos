@@ -97,7 +97,7 @@ export function Header({ toggleSidebar }: HeaderProps) {
     }
   });
 
-  const appName = branding?.appName || "Nebula POS";
+  const appName = branding?.appName || "SURPOS";
   const logoColor = branding?.logoColor || "from-indigo-500 to-purple-600";
   const logoIcon = branding?.logoIcon || "Zap";
 

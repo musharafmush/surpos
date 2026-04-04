@@ -118,7 +118,7 @@ interface BusinessDetails {
 export const generateGSTInvoicePDF = (
   purchase: Purchase,
   businessDetails: BusinessDetails = {
-    name: "NEBULA POS",
+    name: "SURPOS",
     address: "123 Business Street, Commercial Area",
     city: "Chennai",
     state: "Tamil Nadu",
