@@ -334,16 +334,7 @@ export const purchaseItems = sqliteTable('purchase_items', {
   createdAt: text('created_at').default(new Date().toISOString()).notNull()
 });
 
-// Sales Items table (updated)
-export const salesItems = sqliteTable('sales_items', {
-  id: integer('id').primaryKey({ autoIncrement: true }),
-  saleId: integer('sale_id').references(() => sales.id).notNull(),
-  productId: integer('product_id').references(() => products.id).notNull(),
-  quantity: real('quantity').notNull(),
-  unitPrice: real('unit_price').notNull(),
-  subtotal: real('subtotal').notNull(),
-  mrp: real('mrp')
-});
+
 
 // Returns table
 export const returns = sqliteTable('returns', {
