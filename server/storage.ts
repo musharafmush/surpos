@@ -1203,13 +1203,8 @@ export const storage = {
         limit: 1
       });
 
-      const relatedLoyalty = await db.query.customerLoyalty.findMany({
-        where: eq(customerLoyalty.customerId, id),
-        limit: 1
-      });
-
       // If customer has related records, implement soft delete instead
-      if (relatedSales.length > 0 || relatedLoyalty.length > 0) {
+      if (relatedSales.length > 0) {
         // Update customer to inactive status instead of hard delete
         const result = await db.update(customers)
           .set({
