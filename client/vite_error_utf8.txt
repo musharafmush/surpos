@@ -1,0 +1,506 @@
+﻿Port 5173 is in use, trying another one...
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m793[22m[2m[0m ms[22m
+
+  [32mÔ×£[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[2m  [32mÔ×£[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  Ô×£[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+node.exe : Error: The 
+following dependencies 
+are imported but could 
+not be resolved:
+At C:\Program 
+Files\nodejs\npx.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (E  
+  rror: The foll...ot b   
+ e resolved::String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+
+  [36m@/components/ui/toa
+ster[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/not-found[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/App.t
+sx)[22m[39m
+  [36m@/components/ui/the
+me-provider[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/components/error-
+boundary[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/dashboard[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/App.t
+sx)[22m[39m
+  [36m@/pages/pos[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/pos-gofruga
+l[39m [37m[2m(imported 
+by C:/Users/2024/OneDrive/
+Desktop/pos5/client/src/Ap
+p.tsx)[22m[39m
+  [36m@/pages/pos-enhance
+d[39m [37m[2m(imported 
+by C:/Users/2024/OneDrive/
+Desktop/pos5/client/src/Ap
+p.tsx)[22m[39m
+  [36m@/pages/products[3
+9m [37m[2m(imported by C
+:/Users/2024/OneDrive/Desk
+top/pos5/client/src/App.ts
+x)[22m[39m
+  [36m@/pages/products-en
+hanced[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/product-man
+ager[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/add-item-pr
+ofessional[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/add-item-da
+shboard[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/repacking-p
+rofessional[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/repacking-d
+ashboard-professional[39m
+ [37m[2m(imported by C:/
+Users/2024/OneDrive/Deskto
+p/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/update-pric
+e-professional[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/units[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/inventory[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/App.t
+sx)[22m[39m
+  [36m@/pages/purchases[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/App.t
+sx)[22m[39m
+  [36m@/pages/purchase-da
+shboard[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/purchase-en
+try[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/purchase-en
+try-professional[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/tax-reports
+[39m [37m[2m(imported 
+by C:/Users/2024/OneDrive/
+Desktop/pos5/client/src/Ap
+p.tsx)[22m[39m
+  [36m@/pages/users[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/roles[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/settings[3
+9m [37m[2m(imported by C
+:/Users/2024/OneDrive/Desk
+top/pos5/client/src/App.ts
+x)[22m[39m
+  [36m@/pages/suppliers[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/App.t
+sx)[22m[39m
+  [36m@/pages/customers-c
+rud[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/add-product
+[39m [37m[2m(imported 
+by C:/Users/2024/OneDrive/
+Desktop/pos5/client/src/Ap
+p.tsx)[22m[39m
+  [36m@/pages/print-label
+s[39m [37m[2m(imported 
+by C:/Users/2024/OneDrive/
+Desktop/pos5/client/src/Ap
+p.tsx)[22m[39m
+  [36m@/pages/print-label
+s-enhanced[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/custom-labe
+l-printing[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/inventory-f
+orecasting[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/repacking[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/App.t
+sx)[22m[39m
+  [36m@/pages/weight-base
+d-items[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/repacking-d
+ashboard[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/currency-se
+ttings[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/business-se
+ttings[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/auth-page[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/App.t
+sx)[22m[39m
+  [36m@/components/auth/p
+rotected-route[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/hooks/use-auth[3
+9m [37m[2m(imported by C
+:/Users/2024/OneDrive/Desk
+top/pos5/client/src/App.ts
+x)[22m[39m
+  [36m@/pages/unified-pri
+nter-settings[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/cash-regist
+er-management[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/expense-man
+agement[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/expense-cat
+egories[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/offer-manag
+ement[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/offer-repor
+ts[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/loyalty-man
+agement[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/loyalty-rul
+es[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/manufacturi
+ng-dashboard[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/create-prod
+uct-formula[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/raw-materia
+ls-management[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/payroll-das
+hboard[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/payroll-enh
+anced[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/purchase-or
+der-details[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/pages/hsn-codes[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/App.t
+sx)[22m[39m
+  [36m@/pages/tax-categor
+ies[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/App.tsx)
+[22m[39m
+  [36m@/components/layout
+/dashboard-layout[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/acc
+ounts-dashboard.tsx)[22m
+[39m
+  [36m@/components/ui/car
+d[39m [37m[2m(imported 
+by C:/Users/2024/OneDrive/
+Desktop/pos5/client/src/pa
+ges/profit-management.tsx)
+[22m[39m
+  [36m@/components/ui/but
+ton[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/sal
+es-dashboard.tsx)[22m[39
+m
+  [36m@/components/ui/bad
+ge[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/sal
+es-dashboard.tsx)[22m[39
+m
+  [36m@/components/ui/inp
+ut[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/sal
+es-dashboard.tsx)[22m[39
+m
+  [36m@/components/ui/tab
+le[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/pro
+fit-management.tsx)[22m[
+39m
+  [36m@/components/ui/tab
+s[39m [37m[2m(imported 
+by C:/Users/2024/OneDrive/
+Desktop/pos5/client/src/pa
+ges/accounts-dashboard.tsx
+)[22m[39m
+  [36m@/components/ui/lab
+el[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/pro
+fit-management.tsx)[22m[
+39m
+  [36m@/components/ui/sel
+ect[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/sal
+es-dashboard.tsx)[22m[39
+m
+  
+[36m@/lib/currency[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/sal
+es-dashboard.tsx)[22m[39
+m
+  [36m@/components/ui/tex
+tarea[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/bra
+nds.tsx)[22m[39m
+  [36m@/components/ui/dia
+log[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/pro
+fit-management.tsx)[22m[
+39m
+  [36m@/components/ui/swi
+tch[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/rec
+eipt-settings.tsx)[22m[3
+9m
+  [36m@/components/ui/for
+m[39m [37m[2m(imported 
+by C:/Users/2024/OneDrive/
+Desktop/pos5/client/src/pa
+ges/inventory-adjustments.
+tsx)[22m[39m
+  [36m@/components/ui/dro
+pdown-menu[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/bra
+nds.tsx)[22m[39m
+  [36m@/components/pos/pr
+int-receipt[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/rec
+eipt-settings.tsx)[22m[3
+9m
+  [36m@/hooks/use-toast[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/pages
+/accounts-dashboard.tsx)[
+22m[39m
+  [36m@/components/ui/ale
+rt-dialog[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/sal
+es-dashboard.tsx)[22m[39
+m
+  [36m@/components/ui/sep
+arator[39m 
+[37m[2m(imported by C:/U
+sers/2024/OneDrive/Desktop
+/pos5/client/src/pages/acc
+ounts-dashboard.tsx)[22m
+[39m
+  [36m@/lib/queryClient[
+39m [37m[2m(imported by 
+C:/Users/2024/OneDrive/Des
+ktop/pos5/client/src/pages
+/accounts-dashboard.tsx)[
+22m[39m
+  [36m@/components/pos/re
+ceipt-template-manager[39
+m [37m[2m(imported by C:
+/Users/2024/OneDrive/Deskt
+op/pos5/client/src/pages/r
+eceipt-settings.tsx)[22m
+[39m
+
+Are they installed?
+    at file:///C:/Users/20
+24/OneDrive/Desktop/pos5/n
+ode_modules/vite/dist/node
+/chunks/dep-BK3b2jBa.js:50
+669:15
+    at process.processTick
+sAndRejections (node:inter
+nal/process/task_queues:10
+5:5)
+    at async file:///C:/Us
+ers/2024/OneDrive/Desktop/
+pos5/node_modules/vite/dis
+t/node/chunks/dep-BK3b2jBa
+.js:50174:26

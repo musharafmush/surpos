@@ -1,0 +1,58 @@
+﻿
+> surpos@1.0.0 db:seed
+> tsx db/seed.ts
+
+Diagnostic: SQLite DB Path: C:\Users\suriyan\Desktop\surpos\pos-data.db
+≡ƒÜ⌐ Checkpoint 0: Database constructor finished
+≡ƒÜ⌐ Checkpoint 0.1: Pragma skipped (testing for crash)
+≡ƒÜ⌐ Checkpoint 0.2: Drizzle initialized
+Starting database seed...
+node.exe : Error seeding 
+database: SqliteError: no 
+such table: categories
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo          : 
+    NotSpecified: (Error see  
+  ding d...ble: categories:   
+ String) [], RemoteExcepti    
+on
+    + FullyQualifiedErrorId : 
+    NativeCommandError
+ 
+    at Database.prepare (C:\Us
+ers\suriyan\Desktop\surpos\nod
+e_modules\better-sqlite3\lib\m
+ethods\wrappers.js:5:21)
+    at BetterSQLiteSession.pre
+pareQuery (C:\Users\suriyan\De
+sktop\surpos\node_modules\src\
+better-sqlite3\session.ts:50:2
+8)
+    at QueryPromise._prepare (
+C:\Users\suriyan\Desktop\surpo
+s\node_modules\src\sqlite-core
+\query-builders\query.ts:147:7
+8)
+    at 
+QueryPromise.executeRaw (C:\Us
+ers\suriyan\Desktop\surpos\nod
+e_modules\src\sqlite-core\quer
+y-builders\query.ts:191:16)
+    at QueryPromise.execute (C
+:\Users\suriyan\Desktop\surpos
+\node_modules\src\sqlite-core\
+query-builders\query.ts:197:15
+)
+    at QueryPromise.then (C:\U
+sers\suriyan\Desktop\surpos\no
+de_modules\src\query-promise.t
+s:31:15) {
+  code: 'SQLITE_ERROR'
+}
