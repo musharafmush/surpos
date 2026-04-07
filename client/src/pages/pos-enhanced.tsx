@@ -215,13 +215,13 @@ export default function POSEnhanced() {
   // Cash register state
   const [registerOpened, setRegisterOpened] = useState(false);
   const [activeRegisterId, setActiveRegisterId] = useState<number | null>(null);
-  
+
   // High-entropy bill number generation to prevent all possible collisions
   const generateBillNumber = () => {
     const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // No I, O, 0, 1 for legibility
     let result = 'POS';
     for (let i = 0; i < 12; i++) {
-        result += chars.charAt(Math.floor(Math.random() * chars.length));
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
   };
@@ -476,7 +476,7 @@ export default function POSEnhanced() {
       }
     },
   });
-  
+
   // Keep selectedCustomer in sync with the latest data from the query
   useEffect(() => {
     if (selectedCustomer && customers && Array.isArray(customers) && customers.length > 0) {
@@ -868,16 +868,16 @@ export default function POSEnhanced() {
     let batches = [];
 
     try {
-        const res = await fetch(`/api/products/${product.id}/batches`);
-        if (res.ok) {
-            batches = await res.json();
-            if (batches && batches.length > 0) {
-                 accurateCost = parseFloat(batches[0].cost || "0") || accurateCost;
-                 initialPrice = parseFloat(batches[0].selling_price || "0") || initialPrice;
-                 initialMrp = parseFloat(batches[0].mrp || "0") || initialMrp;
-            }
+      const res = await fetch(`/api/products/${product.id}/batches`);
+      if (res.ok) {
+        batches = await res.json();
+        if (batches && batches.length > 0) {
+          accurateCost = parseFloat(batches[0].cost || "0") || accurateCost;
+          initialPrice = parseFloat(batches[0].selling_price || "0") || initialPrice;
+          initialMrp = parseFloat(batches[0].mrp || "0") || initialMrp;
         }
-    } catch(e) { }
+      }
+    } catch (e) { }
 
     const existingItem = (cart || []).find(item => item.id === product.id && !item.isWeightBased);
     if (existingItem) {
@@ -892,11 +892,11 @@ export default function POSEnhanced() {
 
       setCart(prev => prev.map(item =>
         item.id === product.id
-          ? { 
-              ...item, 
-              quantity: item.quantity + 1, 
-              total: (item.quantity + 1) * parseFloat(item.price) 
-            }
+          ? {
+            ...item,
+            quantity: item.quantity + 1,
+            total: (item.quantity + 1) * parseFloat(item.price)
+          }
           : item
       ));
     } else {
@@ -925,7 +925,7 @@ export default function POSEnhanced() {
     // Clear search after adding
     setSearchTerm("");
     if (searchInputRef.current) {
-       searchInputRef.current.focus();
+      searchInputRef.current.focus();
     }
   };
 
@@ -1615,16 +1615,16 @@ export default function POSEnhanced() {
 
       console.log("🚀 POSEnhanced: Processing Transaction...");
       setIsProcessing(true);
-      
+
       // Calculate actual paid amount (Cash + UPI) or total if it's a simple cash/upi payment
-      const finalPaidAmount = paymentMethod === "split" 
+      const finalPaidAmount = paymentMethod === "split"
         ? ((parseFloat(cashAmount) || 0) + (parseFloat(upiAmount) || 0))
         : (parseFloat(amountPaid) || 0);
 
       // Determine the credit burden for the customer account
       // For credit mode: the total. For others: the shortfall (if a customer is selected)
-      const creditAmountValue = selectedCustomer 
-        ? Math.max(0, total - finalPaidAmount) 
+      const creditAmountValue = selectedCustomer
+        ? Math.max(0, total - finalPaidAmount)
         : (paymentMethod === "credit" ? total : 0);
 
       const saleData = {
@@ -1675,7 +1675,7 @@ export default function POSEnhanced() {
 
       console.log("🚀 POSEnhanced: Sending sale payload to API:", saleData);
       console.log("📄 Using billNumber:", billNumber);
-      
+
       const response = await fetch("/api/sales", {
         method: "POST",
         headers: {
@@ -1840,14 +1840,14 @@ export default function POSEnhanced() {
           // previous request actually SUCCEEDED on the server but timed out on the client.
           // We should treat this as a success and move on.
           console.warn("Detected duplicate order number - treating as success (likely previous attempt succeeded but timed out):", billNumber);
-          
+
           toast({
             title: "Transaction Synced",
             description: "Transaction confirmed and recorded successfully.",
             variant: "default",
             className: "bg-emerald-50 border-emerald-200 text-emerald-800",
           });
-          
+
           // Execute success cleanup
           setShowPaymentDialog(false);
           clearCart(false);
@@ -2110,14 +2110,14 @@ export default function POSEnhanced() {
 
       // Use the print receipt utility with proper thermal settings
       const printSettings = {
-        paperWidth: (pricingMode === 'wholesale' ? 'a4' : 
+        paperWidth: (pricingMode === 'wholesale' ? 'a4' :
           (dynamicPrinterSettings?.paperWidth === 'a4' ? 'a4' :
-           dynamicPrinterSettings?.paperWidth ? (
-             dynamicPrinterSettings.paperWidth === '77mm' ? 'thermal77' :
-             dynamicPrinterSettings.paperWidth === '80mm' ? 'thermal80' :
-             dynamicPrinterSettings.paperWidth === '58mm' ? 'thermal58' :
-             dynamicPrinterSettings.paperWidth === '72mm' ? 'thermal72' : 'thermal77'
-           ) : (options?.paperWidth || 'thermal80'))) as any,
+            dynamicPrinterSettings?.paperWidth ? (
+              dynamicPrinterSettings.paperWidth === '77mm' ? 'thermal77' :
+                dynamicPrinterSettings.paperWidth === '80mm' ? 'thermal80' :
+                  dynamicPrinterSettings.paperWidth === '58mm' ? 'thermal58' :
+                    dynamicPrinterSettings.paperWidth === '72mm' ? 'thermal72' : 'thermal77'
+            ) : (options?.paperWidth || 'thermal80'))) as any,
         fontSize: 'medium' as const,
         currencySymbol: '₹',
         businessName: 'M MART',
@@ -2226,10 +2226,10 @@ export default function POSEnhanced() {
       const printSettings = {
         paperWidth: (pricingMode === 'wholesale' ? 'a4' :
           (dynamicPrinterSettings?.paperWidth === 'a4' ? 'a4' :
-          dynamicPrinterSettings?.paperWidth === '77mm' ? 'thermal77' :
-            dynamicPrinterSettings?.paperWidth === '80mm' ? 'thermal80' :
-              dynamicPrinterSettings?.paperWidth === '58mm' ? 'thermal58' :
-                dynamicPrinterSettings?.paperWidth === '72mm' ? 'thermal72' : 'thermal77')) as any,
+            dynamicPrinterSettings?.paperWidth === '77mm' ? 'thermal77' :
+              dynamicPrinterSettings?.paperWidth === '80mm' ? 'thermal80' :
+                dynamicPrinterSettings?.paperWidth === '58mm' ? 'thermal58' :
+                  dynamicPrinterSettings?.paperWidth === '72mm' ? 'thermal72' : 'thermal77')) as any,
         fontSize: (dynamicPrinterSettings?.fontSize || 'medium') as any,
         fontFamily: (dynamicPrinterSettings?.fontFamily || 'courier') as any,
         thermalOptimized: pricingMode === 'wholesale' ? false : (dynamicPrinterSettings?.thermalOptimized ?? true),
@@ -3410,55 +3410,55 @@ export default function POSEnhanced() {
                               )}
                               {item.cost && parseFloat(item.cost.toString()) >= 0 && (
                                 <div className="flex items-center gap-1">
-                                    <Badge variant="outline" className="text-[8px] h-3.5 bg-amber-50 text-amber-600 border-amber-100 font-bold uppercase relative group pr-4">
-                                      Cost: {formatCurrency(parseFloat(item.cost.toString()))}
-                                      {item.availableBatches && item.availableBatches.length > 0 && (
-                                         <select 
-                                           className="absolute inset-0 opacity-0 cursor-pointer"
-                                           value={item.batchId || ''}
-                                           onChange={(e) => {
-                                              const newBatchId = e.target.value ? parseInt(e.target.value) : null;
-                                              const newBatch = item.availableBatches?.find(b => b.id === newBatchId);
-                                              if (newBatch) {
-                                                                                                     setCart(prev => prev.map(cItem => cItem.id === item.id ? { 
-                                                       ...cItem, 
-                                                       batchId: newBatchId, 
-                                                       cost: newBatch.cost.toString(), 
-                                                       price: newBatch.selling_price.toString(),
-                                                       unitPrice: parseFloat(newBatch.selling_price.toString()),
-                                                       total: cItem.quantity * parseFloat(newBatch.selling_price.toString()),
-                                                       mrp: newBatch.mrp?.toString() || cItem.mrp 
-                                                   } : cItem));
-                                              }
-                                              if (!newBatchId) {
-                                                  // back to default product cost
-                                                                                                     const fBatch = item.availableBatches?.[0];
-                                                   const rC = fBatch ? fBatch.cost.toString() : (item.defaultPrice || 0).toString();
-                                                   const rP = fBatch ? fBatch.selling_price.toString() : (item.defaultPrice || 0).toString();
-                                                   const rM = fBatch ? (fBatch.mrp || 0).toString() : (item.defaultMrp || 0).toString();
-                                                   const rPN = parseFloat(rP);
-                                                   setCart(prev => prev.map(cItem => cItem.id === item.id ? { 
-                                                       ...cItem, 
-                                                       batchId: null, 
-                                                       cost: rC, 
-                                                       price: rP,
-                                                       unitPrice: rPN,
-                                                       total: cItem.quantity * rPN,
-                                                       mrp: rM
-                                                   } : cItem));
-                                              }
-                                           }}
-                                         >
-                                            <option value="">Automatic FIFO (Recommended)</option>
-                                            {item.availableBatches.map(b => (
-                                                <option key={b.id} value={b.id}>
-                                                    Batch #{b.batch_number || b.id} (Cost: {formatCurrency(parseFloat(b.cost || "0"))}, Sell: {formatCurrency(parseFloat(b.selling_price || "0"))}, MRP: {formatCurrency(parseFloat(b.mrp || "0"))}, Avail: {b.qty || 0})
-                                                </option>
-                                            ))}
-                                         </select>
-                                      )}
-                                      {item.availableBatches && item.availableBatches.length > 0 && <ChevronDown className="h-2 w-2 absolute right-1 top-1/2 -translate-y-1/2 opacity-50" />}
-                                    </Badge>
+                                  <Badge variant="outline" className="text-[8px] h-3.5 bg-amber-50 text-amber-600 border-amber-100 font-bold uppercase relative group pr-4">
+                                    Cost: {formatCurrency(parseFloat(item.cost.toString()))}
+                                    {item.availableBatches && item.availableBatches.length > 0 && (
+                                      <select
+                                        className="absolute inset-0 opacity-0 cursor-pointer"
+                                        value={item.batchId || ''}
+                                        onChange={(e) => {
+                                          const newBatchId = e.target.value ? parseInt(e.target.value) : null;
+                                          const newBatch = item.availableBatches?.find(b => String(b.id) === String(newBatchId));
+                                          if (newBatch) {
+                                            setCart(prev => prev.map(cItem => cItem.id === item.id ? {
+                                              ...cItem,
+                                              batchId: newBatchId,
+                                              cost: newBatch.cost.toString(),
+                                              price: newBatch.selling_price.toString(),
+                                              unitPrice: parseFloat(newBatch.selling_price.toString()),
+                                              total: cItem.quantity * parseFloat(newBatch.selling_price.toString()),
+                                              mrp: newBatch.mrp?.toString() || cItem.mrp
+                                            } : cItem));
+                                          }
+                                          if (!newBatchId) {
+                                            // back to default product cost
+                                            const fBatch = item.availableBatches?.[0];
+                                            const rC = fBatch ? fBatch.cost.toString() : (item.defaultPrice || 0).toString();
+                                            const rP = fBatch ? fBatch.selling_price.toString() : (item.defaultPrice || 0).toString();
+                                            const rM = fBatch ? (fBatch.mrp || 0).toString() : (item.defaultMrp || 0).toString();
+                                            const rPN = parseFloat(rP);
+                                            setCart(prev => prev.map(cItem => cItem.id === item.id ? {
+                                              ...cItem,
+                                              batchId: null,
+                                              cost: rC,
+                                              price: rP,
+                                              unitPrice: rPN,
+                                              total: cItem.quantity * rPN,
+                                              mrp: rM
+                                            } : cItem));
+                                          }
+                                        }}
+                                      >
+                                        <option value="">Automatic FIFO (Recommended)</option>
+                                        {item.availableBatches.map(b => (
+                                          <option key={b.id} value={b.id}>
+                                            Batch #{b.batch_number || b.id} (Cost: {formatCurrency(parseFloat(b.cost || "0"))}, Sell: {formatCurrency(parseFloat(b.selling_price || "0"))}, MRP: {formatCurrency(parseFloat(b.mrp || "0"))}, Avail: {b.qty || 0})
+                                          </option>
+                                        ))}
+                                      </select>
+                                    )}
+                                    {item.availableBatches && item.availableBatches.length > 0 && <ChevronDown className="h-2 w-2 absolute right-1 top-1/2 -translate-y-1/2 opacity-50" />}
+                                  </Badge>
                                   <Badge variant="outline" className="text-[8px] h-3.5 bg-emerald-50 text-emerald-600 border-emerald-100 font-bold uppercase">
                                     Profit: {formatCurrency(parseFloat(item.price) - parseFloat(item.cost.toString()))}
                                     {' | '}
@@ -3718,7 +3718,7 @@ export default function POSEnhanced() {
                           <span className="text-[9px] font-black text-emerald-100/80 uppercase tracking-tighter">pts</span>
                         </div>
                       </div>
-                      
+
                       {/* NEW: Credit Balance Display with Settle Action */}
                       <div className="flex flex-col gap-2 bg-black/10 p-2.5 rounded-xl border border-white/5 group-hover:bg-black/20 transition-colors">
                         <div className="flex justify-between items-center">
@@ -5465,23 +5465,23 @@ export default function POSEnhanced() {
                   ) : paymentMethod === 'credit' ? (
                     <div className="p-6 bg-orange-50 rounded-[2rem] border border-orange-100 animate-in-fade slide-in-from-top-4">
                       <div className="flex items-center gap-3 mb-3">
-                         <div className="w-10 h-10 bg-orange-600 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-200">
-                           <ShieldAlert className="h-5 w-5 text-white" />
-                         </div>
-                         <div>
-                           <h3 className="text-sm font-black text-orange-800 uppercase tracking-tight">Credit (Udhaar) Mode</h3>
-                           <p className="text-[10px] font-bold text-orange-600/80">Full bill amount will be added to customer ledger</p>
-                         </div>
+                        <div className="w-10 h-10 bg-orange-600 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-200">
+                          <ShieldAlert className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-sm font-black text-orange-800 uppercase tracking-tight">Credit (Udhaar) Mode</h3>
+                          <p className="text-[10px] font-bold text-orange-600/80">Full bill amount will be added to customer ledger</p>
+                        </div>
                       </div>
                       <div className="space-y-3">
                         <div className="bg-white/60 p-4 rounded-xl border border-orange-100/50">
-                           <div className="flex justify-between text-[10px] font-black uppercase text-slate-400 mb-1">
-                              <span>Current Sale Amount</span>
-                              <span className="text-orange-600">New Debt</span>
-                           </div>
-                           <div className="text-lg font-black text-slate-900 tabular-nums">
-                              {formatCurrency(total)}
-                           </div>
+                          <div className="flex justify-between text-[10px] font-black uppercase text-slate-400 mb-1">
+                            <span>Current Sale Amount</span>
+                            <span className="text-orange-600">New Debt</span>
+                          </div>
+                          <div className="text-lg font-black text-slate-900 tabular-nums">
+                            {formatCurrency(total)}
+                          </div>
                         </div>
 
                         {selectedCustomer && (
@@ -5915,10 +5915,10 @@ export default function POSEnhanced() {
         </Dialog>
 
         {/* Quick Udhaar Pay (Settlement) Dialog */}
-        <QuickPayDialog 
-          open={showQuickPayDialog} 
-          onOpenChange={setShowQuickPayDialog} 
-          selectedCustomer={selectedCustomer} 
+        <QuickPayDialog
+          open={showQuickPayDialog}
+          onOpenChange={setShowQuickPayDialog}
+          selectedCustomer={selectedCustomer}
         />
 
       </div>
